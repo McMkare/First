@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+<div class="form">
+	<header class="hed">Create Account</header>
+	<form action = "send.php" method="POST"> 
+		<div class="form-content"> 
+			<div class="Profile"><p>Personal Detail</p>
+				<input type="text" name="Firstname" placeholder="Firstname">
+				<input type="text" name="Lastname" placeholder="Lastname">
+				<input type="text" name="Gender" placeholder="Gender">
+				<input type="text" name="ID" placeholder="ID">
+				<input type="text" name="DoB" placeholder="Date of birth">
+			</div>
+			<div class="contact"><p>Contact</p>
+				<input type="text" name="Email" placeholder="Email">
+				<input type="text" name="Address" placeholder="Address">
+				<input type="text" name="Telephone" placeholder="Telephone">
+				<input type="text" name="Mobile" placeholder="Mobile">
+			<!-- <div class="form-residence"><p>Residence</p> -->
+				<input type="text" name="Country" placeholder="Country">
+			</div>
+			<!-- <div class="massage">
+				<textarea placeholder="Additonal information" name="massage"></textarea>
+			</div> -->
+			<div class="button-area">
+				<button type="submit" value="Submit" onclick="btnResult">Submit</button>
+				<div class="span">
+					<span>Sendig your details...</span>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+</body>
+</html>
