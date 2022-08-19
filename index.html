@@ -1,215 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>ShoeHub</title>
-	<link rel="stylesheet" type="text/css" href="style2.css">
-</head>
-<body>
-<!-- Navbar Section -->
-<nav class="navbar">
-	<div class="navbar-container">
-		<a href="#" id="navbar-logo">ShoeHub</a>
-		<div class="navbar-toggle" id="mobile-menu">
-			<span class="bar"></span> 
-			<span class="bar"></span>
-			<span class="bar"></span>
-		</div>
-		<ul class="navbar-menu">
-			<li class="navbar-items">
-				<a href="index.html" class="navbar-links" id="home-page">Home</a>
-			</li>
-			<li class="navbar-items">
-				<a href="#about" class="navbar-links" id="about-page">About</a>
-			</li>
-			<li class="navbar-items">
-				<a href="#services" class="navbar-links" id="services-page">Services</a>
-			</li>
-			<li class="navbar-btn">
-				<a href="#sign-up" class="button" id="sign-up">Sign up</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-
-<!-- Background body section -->
-<div class="details" id="home">
-	<div class="details-container">
-		<h1 class="details-heading">Welcome to the <span>ShoeHub</span></h1>
-		<p class="details-infor">Explore More</p>
-		<button class="main-btn"><a href="about.html">Explore</a></button>
-	</div>
-</div>
-<!-- About Section -->
-<div class="main" id="about">
-	<div class="main-container">
-		<div class="main-img-container">
-			<div class="main-img-card">ICON</div>
-		</div>
-		<div class="main-content">
-			<h1>About ShoeHub</h1>
-			<h2>Buy and Sell Shoes</h2>
-			<p>We also accept partnership with other shoe sellers to join our company.more about our services</p>
-			<button class="main-btn"><a href="more.html">Read more</a></button>
-		</div>		
-	</div>
-</div>
-
-<!-- Service Section -->
-<div class="services" id="services">
-	<h1>Our Services</h1>
-	<div class="services-wrapper">
-		<div class="services-card">
-			<h2>Buy Shoes</h2>
-			<p>Advance buying</p>
-			<div class="services-btn"><button>Get Started</button></div>
-		</div>
-		<div class="services-card">
-			<h2>Boots</h2>
-			<p>All Size</p>
-			<div class="services-btn"><button>Get Started</button></div>
-		</div>
-		<div class="services-card">
-			<h2>Search Here</h2>
-			<p>All Types</p>
-			<div class="services-btn"><button>Get Started</button></div>
-		</div>
-		<div class="services-card">
-			<h2>Check Out</h2>
-			<p>New Design</p>
-			<div class="services-btn"><button>Get Started</button></div>
-		</div>
-	</div>
-</div>
-
-<!-- Feature Section -->
-<div class="main" id="sign-up">
-	<div class="main-container">
-		<div class="main-content">
-			<h1>Join Us</h1>
-			<h2>Create an Account</h2>
-			<p>Change your services and increase sales today</p>
-			<button class="main-btn"><a href="trialjs.html">Join Us</a></button>		
-		</div>
-		<div class="main-img-container">
-			<div class="main-img-card" id="card-2">Sign up</div>
-		</div>
-	</div>
-</div>
-<!-- Footer section -->
-<div class="footer-container">
-	<div class="footer-links">
-		<div class="footer-links-wrapper">
-			<div class="footer-links-items">
-				<h2>About Us</h2>
-				<a href="/">How it works</a>
-				<a href="/">Marketting</a>
-				<a href="/">Services</a>
-				<a href="/">Terms of Service</a>
-			</div>
-			<div class="footer-links-items">
-				<h2>Contact Us</h2>
-				<a href="/">Contacts</a>
-				<a href="/">Support</a>
-				<a href="/">Location</a>
-			</div>
-		</div>
-		<div class="footer-links-wrapper">
-			<div class="footer-links-items">
-				<h2>Customer Box</h2>
-				<a href="/">Agency</a>
-				<a href="/">Video</a>
-				<a href="/">Customers</a>
-			</div>
-			<div class="footer-links-items">
-				<h2>Social Media</h2>
-				<a href="/">Instagram</a>
-				<a href="/">Youtube</a>
-				<a href="/">Facebook</a>
-				<a href="/">Twitter</a>
-			</div>
-		</div>
-		
-	</div>
-	<section class="social-media">
-		<div class="social-media-wrap">
-			<div class="footer-logo">
-				<a href="" id="footer-logo">ShoeHub</a>
-			</div>
-			<p class="website-rights">G ShoeHub 2021. All rights reserved</p>
-			<div class="social-icons">
-				<a href="" class="social-icons-link"><i class="fab fa-facebook-f"></i></a>
-				<a href="" class="social-icons-link"><i class="fab fa-instagram-f"></i></a>
-				<a href="" class="social-icons-link"><i class="fab fa-youtube-f"></i></a>
-				<a href="" class="social-icons-link"><i class="fab fa-twitter-f"></i></a>
-			</div>
-		</div>
-	</section>
-</div>
-
-
-<!-- Scripting Section -->
-
-<script type="text/javascript">
-	const menu = document.querySelector('#mobile-menu');
-	const menuLinks = document.querySelector('.navbar-menu');
-	const navLogo = document.querySelector('#navbar-logo');
-
-	// Display Mobile Menu Operation
-
-	const mobileMenu = () => {
-		menu.classList.toggle('is-active');
-		menuLinks.classList.toggle('active');
-	}
-
-	menu.addEventListener('click', mobileMenu);
-
-	// Showing active menu on scrolling
-
-	const highlightMenu = () => {
-		const elem = document.querySelector('.highlight')
-		const homeMenu = document.querySelector('#home-page')
-		const aboutMenu = document.querySelector('#about-page')
-		const servicesMenu = document.querySelector('#services-page')
-		let scrollPos = window.scrollY
-
-		// Adding highlights into menu items
-		if (window.innerWidth > 960 && scrollPos < 600) {
-			homeMenu.classList.add('highlight')
-			aboutMenu.classList.remove('highlight')
-			return
-		} else if (window.innerWidth > 960 && scrollPos < 1400) {
-			aboutMenu.classList.add('highlight')
-			homeMenu.classList.remove('highlight')
-			servicesMenu.classList.remove('highlight')
-			return
-		} else if (window.innerWidth > 960 && scrollPos < 2345) {
-			servicesMenu.classList.add('highlight')
-			aboutMenu.classList.remove('highlight')
-			return
-		}
-
-		if ((elem && window.innerWidth < 960 && scrollPos < 600) || elem) {
-			elem.classList.remove('highlight');
-		};
-	};
-	window.addEventListener('scroll', highlightMenu);
-	window.addEventListener('click', highlightMenu);
-
-	// closing mobile icons
-
-	const hideMobileMenu = () => {
-		const menuBars = document.querySelector('.is-active');
-
-		if (window.innerWidth <= 768 && menuBars) {
-			menu.classList.toggle('is-active');
-			menuLinks.classList.remove('active');
-		}
-	}
-
-	menuLinks.addEventListener('click', hideMobileMenu);
-	navLogo.addEventListener('click', hideMobileMenu);
-
-</script>
-</body>
+<html> 
+    <head>
+          <style>
+            body {
+                background-image: sold green;
+                background: green;
+                background-size: cover;
+                text-align: center;
+                font-weight: bold;
+                color: white;
+            }
+            h1 {
+                color: goldenrod;
+            }
+           #message-el {
+            font-style: italic;
+           } 
+           button {
+            color: green;
+            width: 150px;
+            background: goldenrod;
+            font-weight: bold;
+            padding-top: 5px;
+            border: none;
+            padding-bottom: 5px;
+            margin-bottom: 4px;
+            margin-top: 4px;
+           }
+          </style> 
+    </head>
+    <body>
+       <h1>Blackjack</h1>
+       <p id="message-el">Want to play a round</p>
+       <p id="card-el">Cards:</p>
+       <p id="sum-el">Sum:</p>
+       <button onclick ="startGame()">START GAME</button>
+       <button onclick="newCard()">NEW CARD</button>
+        <script src="index.js"></script>
+    </body>
 </html>
